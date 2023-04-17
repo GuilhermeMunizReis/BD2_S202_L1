@@ -1,0 +1,62 @@
+[
+    {
+        "_id": {
+            "cliente": 1,
+            "compra": "2022-03-17"
+        },
+        "produto": {
+            "descricao": "Sabonete",
+            "quantidade": 3
+        }
+    },
+    {
+        "_id": {
+            "cliente": 3,
+            "compra": "2022-03-15"
+        },
+        "produto": {
+            "descricao": "Bolacha",
+            "quantidade": 3
+        }
+    },
+    {
+        "_id": {
+            "cliente": 6,
+            "compra": "2022-03-13"
+        },
+        "produto": {
+            "descricao": "Banana",
+            "quantidade": 4
+        }
+    },
+    {
+        "_id": {
+            "cliente": 2,
+            "compra": "2022-03-16"
+        },
+        "produto": {
+            "descricao": "Laranja",
+            "quantidade": 4
+        }
+    },
+    {
+        "_id": {
+            "cliente": 4,
+            "compra": "2022-03-14"
+        },
+        "produto": {
+            "descricao": "Bolacha",
+            "quantidade": 3
+        }
+    },
+    {
+        "_id": {
+            "cliente": 5,
+            "compra": "2022-03-14"
+        },
+        "produto": {
+            "descricao": "Cerveja",
+            "quantidade": 12
+        }
+    }
+]
