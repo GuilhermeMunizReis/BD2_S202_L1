@@ -7,9 +7,4 @@ auth = basic_auth("neo4j", "depth-rocks-warranty")
 teacherCRUD = Teacher_CRUD(uri, auth)
 teacherCLI = TeacherCLI(teacherCRUD)
 
-#res = teacherCRUD.session.run("MATCH(n) return n")
-#record = res.values()
-#for item in record:
-#    print(item)
-
 teacherCLI.run()
