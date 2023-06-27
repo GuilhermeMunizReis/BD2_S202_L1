@@ -1,0 +1,31 @@
+CREATE (c:Clan{name:"McGreggor"});
+CREATE (c:Clan{name:"McKintosh"});
+CREATE (c:Clan{name:"McBlair"});
+
+CREATE (c:Person:Chief{name:"Fergus", age: 42, approval: 100});
+CREATE (m:Person:Member{name:"Grant", age: 34, title: "Lord"});
+CREATE (m:Person:Member{name:"Bryce", age: 37, title: "Earl"});
+
+CREATE (c:Person:Chief{name:"Duncan", age: 48, approval: 91});
+CREATE (m:Person:Member{name:"Willian", age: 41, title: "Lord"});
+CREATE (m:Person:Member{name:"Robert", age: 25, title: "Earl"});
+
+CREATE (c:Person:Chief{name:"Craig", age: 37, approval: 84});
+CREATE (m:Person:Member{name:"Ross", age: 41, title: "Lord"});
+CREATE (m:Person:Member{name:"Karson", age: 21, title: "Earl"});
+
+MATCH (p:Person{name:"Fergus"}), (c:Clan{name:"McGreggor"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Grant"}), (c:Clan{name:"McGreggor"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Bryce"}), (c:Clan{name:"McGreggor"}) CREATE (p)-[:MEMBER_OF]->(c);
+
+MATCH (p:Person{name:"Duncan"}), (c:Clan{name:"McKintosh"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Willian"}), (c:Clan{name:"McKintosh"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Robert"}), (c:Clan{name:"McKintosh"}) CREATE (p)-[:MEMBER_OF]->(c);
+
+MATCH (p:Person{name:"Craig"}), (c:Clan{name:"McBlair"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Ross"}), (c:Clan{name:"McBlair"}) CREATE (p)-[:MEMBER_OF]->(c);
+MATCH (p:Person{name:"Karson"}), (c:Clan{name:"McBlair"}) CREATE (p)-[:MEMBER_OF]->(c);
+
+MATCH (c:Chief{name:"Fergus"}), (k:Clan{name:"McGreggor"}) CREATE (c)-[:RULES]->(k);
+MATCH (c:Chief{name:"Duncan"}), (k:Clan{name:"McKintosh"}) CREATE (c)-[:RULES]->(k);
+MATCH (c:Chief{name:"Craig"}), (k:Clan{name:"McBlair"}) CREATE (c)-[:RULES]->(k);
